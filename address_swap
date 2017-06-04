@@ -1,0 +1,30 @@
+#include<iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+/* TODO: write a function that returns void, and takes two
+ * POINTERS to integers, and swaps the contents of those two
+ * memory locations.  Note: part of this exercise is understanding
+ * what I'm asking for...
+ * */
+void point_address_swap(int*& x,int*& y)
+{
+//swaps the address of the pointers
+  int* a = x;
+  x = y;
+  y = a;
+}
+
+int main()
+{
+  int c,y;
+  int* p = &y;
+  int* x = &c;
+  cout<<p<<endl;
+  cout<<x<<endl;
+  point_address_swap(x,p);
+  cout<<p<<endl;
+  cout<<x<<endl;
+
+  return 0;
+}
